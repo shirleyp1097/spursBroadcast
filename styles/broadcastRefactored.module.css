@@ -1,0 +1,261 @@
+/* Refactored broadcast component styles */
+/* Copied from original broadcast.module.css */
+
+.pageDiv {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: "Fixture Condensed Medium";
+  font-size: 16px;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+.sponsorTexDiv {
+  font-size: 25px;
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#image {
+  width: 4%;
+  margin: 10px;
+}
+
+@media(max-width: 800px) {
+  .sponsorTexDiv {
+    font-size: 1.5rem;
+  }  
+  #image {
+    width: 15%;
+  }
+  .pageDiv {
+    padding-bottom: 0px;
+  }
+}
+
+.pageDiv p {
+  margin-bottom: 0;
+}
+
+.nextGameCardAndTableDiv {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SHARED CSS */
+.headerTextDiv {
+  font-size: 2.5rem;
+}
+
+.homeAwayBorderDiv {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.homeBorderDiv {
+  background-color: black;
+  color: white;
+}
+
+.awayBorderDiv {
+  background-color: #e0e0e0;
+  color: #484848;
+}
+
+/* END SHARED CSS */
+
+/* MAIN GAME */
+.nextGameDateText {
+  /* moved from inline - next game date styling */
+}
+.nextGameCardDiv {
+  display: inline-block;
+  height: 1%;
+  border: 1px solid black;
+  border-radius: 15%;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+.tabHeader {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  /* background-color: red; */
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activeTabHeader {
+  background-color: #333333;
+  color: white;
+  margin-top: 5px;
+}
+
+.tabHeaderDiv {
+  display: flex;
+  font-size: 1.6rem;
+}
+
+.inactiveTabHeader {
+  /* moved from inline - default tab styling */
+}
+
+/* END MAIN GAME */
+
+/* TABLE */
+.preTableText {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.providerTable td,
+.providerTable th {
+  width: 10rem;
+}
+
+.providerTable td:first-child,
+.providerTable th:first-child {
+  text-align: left;
+}
+
+.providerTable td:last-child,
+.providerTable th:last-child {
+  text-align: right;
+}
+/* END TABLE */
+
+/* NEXT GAMES */
+.nextGamesDiv {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10%;
+  width: 25%;
+  font-size: 1.25rem;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.nextGamesTextDiv {
+  font-size: 1.25rem;
+}
+
+.nextGamesDateText {
+  font-size: 2rem;
+}
+/* END NEXT GAMES */
+
+@media (min-width: 500px) {
+  /* SHARED CSS */
+  .headerTextDiv {
+    font-size: 5rem;
+  }
+  /* END SHARED CSS */
+
+  /* MAIN NEXT GAME CSS */
+
+  /* END MAIN NEXT GAME CSS */
+
+  /* TABLE */
+  .preTableText {
+    font-size: 2rem;
+  }
+  /* END TABLE */
+
+  /* NEXT GAMES */
+  .nextGamesTextDiv {
+    font-size: 2rem;
+  }
+
+  .nextGamesDateText {
+    font-size: 3rem;
+  }
+  /* END NEXT GAMES */
+}
+
+@media (min-width: 700px) {
+  .nextGameCardAndTableDiv {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nextGameCardDiv {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .tabHeaderDiv {
+    /* font-size: 5rem !important; */
+    margin-top: 0.5rem;
+  }
+  /* SHARED CSS */
+  .nextGameCardAndTableDiv {
+    justify-content: center;
+    gap: 3rem;
+  }
+  /* END SHARED CSS */
+
+  /* TABLE */
+  .preTableText {
+    font-size: 3rem;
+  }
+
+  /* END TABLE */
+
+  /* MAIN NEXT GAME CSS */
+
+  /* END MAIN NEXT GAME CSS */
+
+  /* NEXT GAMES */
+
+  /* END NEXT GAMES */
+} 
+
+.teamCardDiv {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.broadcastCardDiv {
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.cardImg {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.border {
+  border: 1px solid black;
+  border-radius: 10%;
+}

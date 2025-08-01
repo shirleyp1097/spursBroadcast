@@ -1,0 +1,22 @@
+{
+  "name": "broadcast-nextjs",
+  "version": "1.0.0",
+  "description": "NBA Spurs Broadcast Component - Next.js Project",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "next": "^13.5.6",
+    "react-bootstrap": "^2.7.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^13.5.6"
+  }
+}
