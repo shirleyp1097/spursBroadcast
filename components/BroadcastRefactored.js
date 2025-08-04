@@ -1,8 +1,5 @@
 "use client";
 
-// Main entry point for broadcast refactored component
-// Modular architecture with separated concerns
-
 import React, { useState, useEffect } from "react";
 import { NextGame, NextGames } from "./";
 import { URL } from "../utils/constants";
@@ -10,9 +7,7 @@ import styles from "../styles/broadcastRefactored.module.css";
 import Script from "next/script";
 
 const BroadcastRefactored = () => {
-  // let currentDate = new Date();
-  // testing !!!
-  let currentDate = new Date('1/12/25');
+  let currentDate = new Date('1/23/25');
 
   const [results, setResults] = useState(null);
   const [nextGamesCount, setNextGamesCount] = useState(5); // Initial value for mobile view
@@ -78,7 +73,9 @@ const BroadcastRefactored = () => {
 
   if (results === null) {
     // Handle loading state
-    return <p>Loading...</p>;
+    return <p style={{
+      fontFamily: 'Fixture Condensed Medium', // Must match the font name in @font-face
+    }}>Loading...</p>;
   }
 
   const allGames = results.results.schedule;
@@ -96,7 +93,7 @@ const BroadcastRefactored = () => {
     <div>
       <div id="nba-nav" data-team="spurs" data-hasAds="false"></div>
       <div className={styles.pageDiv}>
-        <div className={styles.content}>
+        <div>
           {nextSpursGames.length > 0 && (
             <NextGame 
               game={nextSpursGames[0]} 

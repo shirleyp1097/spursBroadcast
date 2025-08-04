@@ -58,7 +58,7 @@ export const getGameTime = (game) => {
   }
   hour = hour % 12;
   let minutes = inputTimeSplit[1];
-  return hour + ":" + minutes + " " + amPm + " CST";
+  return hour + ":" + minutes + " " + amPm + " CT";
 };
 
 export const getGameDayOfTheWeek = (game) => {

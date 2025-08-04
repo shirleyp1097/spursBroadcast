@@ -1,7 +1,5 @@
-import { Inter } from 'next/font/google';
+import { fixtureFont } from './fonts';
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'NBA Spurs Broadcast',
@@ -11,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={fixtureFont.className}>
         {children}
       </body>
     </html>

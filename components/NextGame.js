@@ -1,6 +1,6 @@
 import React from "react";
 import { HomeAwayBorder, MyButton, Tabs, ProviderTable } from "./";
-import { getGameProvider, isLeaguePassGame, getBroadcastCard } from "../utils/providerUtils";
+import { getGameProvider, getBroadcastCard } from "../utils/providerUtils";
 import { getGameDate, getGameTime, getGameDayOfTheWeek, areSpursHome, getAwayTeam, getHomeTeam, getAwayTeamFullName, getHomeTeamFullName } from "../utils/gameUtils";
 import Card from "./Card.js";
 import styles from "../styles/broadcastRefactored.module.css";
@@ -68,7 +68,7 @@ const NextGame = ({ game, nextSpursGames, activeTab, handleTabClick, nextGameCar
               >
                 {getBroadcastCard(game, nextGameCardHeightWidthValue, activeTab)}
               </div>
-              {areSpursHome(game) && !isLeaguePassGame(game, activeTab) && (
+              {areSpursHome(game) && (
                 <div>
                   <hr />
                   <div>
@@ -76,33 +76,6 @@ const NextGame = ({ game, nextSpursGames, activeTab, handleTabClick, nextGameCar
                       game={game}
                       buttonType="game"
                       text="BUY TICKETS"
-                    />
-                  </div>
-                </div>
-              )}
-              {isLeaguePassGame(game, activeTab) && !areSpursHome(game) && (
-                <div>
-                  <hr />
-                  <div>
-                    <MyButton
-                      buttonType="leaguePass"
-                      text="BUY LEAGUE PASS"
-                    />
-                  </div>
-                </div>
-              )}
-              {areSpursHome(game) && isLeaguePassGame(game, activeTab) && (
-                <div>
-                  <hr />
-                  <div style={{ gap: "3rem" }}>
-                    <MyButton
-                      game={game}
-                      buttonType="game"
-                      text="BUY TICKETS"
-                    />
-                    <MyButton
-                      buttonType="leaguePass"
-                      text="BUY LEAGUE PASS"
                     />
                   </div>
                 </div>
@@ -112,14 +85,21 @@ const NextGame = ({ game, nextSpursGames, activeTab, handleTabClick, nextGameCar
           {(() => {
             const gameProvider = getGameProvider(game, activeTab);
             return (
-              <>
+              <div className={styles.providerTableDiv}>
                 {gameProvider && gameProvider["localBroadcast"] && (
-                  <div><ProviderTable game={game} localNatlString="local" activeTab={activeTab} /></div>
+                  <div>
+                    <ProviderTable game={game} localNatlString="local" activeTab={activeTab} />
+                  </div>
+                )}
+                {gameProvider && gameProvider["localBroadcast"] && gameProvider["natlBroadcast"] && (
+                  <div style={{ height: "1rem" }} />
                 )}
                 {gameProvider && gameProvider["natlBroadcast"] && (
-                  <div><ProviderTable game={game} localNatlString="natl" activeTab={activeTab} /></div>
+                  <div>
+                    <ProviderTable game={game} localNatlString="natl" activeTab={activeTab} />
+                  </div>
                 )}
-              </>
+              </div>
             );
           })()}
         </div>

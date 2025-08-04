@@ -33,11 +33,7 @@ const urls = {
   POR: "https://cdn.nba.com/teams/uploads/sites/1610612759/2023/11/PTrailBlazers_Primary_Icon.png",
   WAS: "https://cdn.nba.com/teams/uploads/sites/1610612759/2023/11/WWizards_Primary_Icon.png",
   ESPN: "https://cdn.nba.com/teams/uploads/sites/1610612759/2023/11/espn.png",
-  // BALLYS: "https://cdn.nba.com/teams/uploads/sites/1610612759/2023/11/ballys.png",
-  BALLYS:
-    "https://cdn.nba.com/teams/uploads/sites/1610612759/2023/12/bly_sprt_lg_vrt_rgb_pos_210107-1918x1255-543f1b3.png",
   CWSA: "https://cdn.nba.com/teams/uploads/sites/1610612759/2024/10/logo_woai_cw35_legal_color-blk-1.png",
-  // KENS: "https://cdn.nba.com/teams/uploads/sites/1610612759/2023/11/kens5.png",
   KENS: "https://cdn.nba.com/teams/uploads/sites/1610612759/2023/12/KENS-5-logo-blue.png",
   TNT: "https://cdn.nba.com/teams/uploads/sites/1610612759/2023/11/TNT.png",
   NBATV:
